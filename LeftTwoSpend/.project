@@ -3,6 +3,7 @@
 	<name>LeftTwoSpend</name>
 	<comment></comment>
 	<projects>
+		<project>LeftTwoSpendEntities</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
