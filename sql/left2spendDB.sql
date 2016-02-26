@@ -24,8 +24,8 @@ DROP TABLE IF EXISTS `account` ;
 SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `account` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `monthly_allowance` FLOAT NOT NULL DEFAULT 0.0,
-  `spent_this_month` FLOAT NOT NULL DEFAULT 0.0,
+  `monthly_allowance` DECIMAL(7,2) NOT NULL DEFAULT 0.0,
+  `spent_this_month` DECIMAL(7,2) NOT NULL DEFAULT 0.0,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -39,7 +39,7 @@ DROP TABLE IF EXISTS `users` ;
 SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `users` (
   `email` VARCHAR(45) NOT NULL,
-  `amount_spent` FLOAT NOT NULL DEFAULT 0.0,
+  `amount_spent` DECIMAL(7,2) NOT NULL DEFAULT 0.0,
   `password` VARCHAR(45) NOT NULL,
   `account_id` INT NULL,
   PRIMARY KEY (`email`),
